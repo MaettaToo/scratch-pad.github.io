@@ -22,7 +22,14 @@
 function reverseString(input) {
     // YOUR CODE GOES BELOW HERE //
     
-    
+    //I: function with strings as input
+    //O: function will return the input string in the reverse
+    //C:
+    //
+    //Initialize function reverseString  with one value in parameter representing string
+    //Initialize var assigned to empty strings to collect reversed string 
+    //Create for loop to access string iterating over length of string, start: end value of string, stop: beginning value of string, decrementing by 1
+    //access string using bracket notation use the 
     
     
     // YOUR CODE GOES ABOVE HERE //
