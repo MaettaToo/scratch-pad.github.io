@@ -21,7 +21,6 @@ function length(string) {
 //return the length of string using length method
 return string.length; 
    
-    
     // YOUR CODE ABOVE HERE //
 }
 
@@ -57,7 +56,7 @@ function toUpperCase(string) {
     // create empty variable to assign to results of returning string to uppercase
     var uCase = ''; 
     //return input string as upper case using toUpperCase property
-    return uCase = string.toUpperCase();
+    return uCase = string.toUpperCase(string);
 
 /**
  * Given an input String, return a new String forced to dash-case.
@@ -80,7 +79,7 @@ function toDashCase(string) {
 //E: 
 
 //return new string using replace and toLowercase
-return  string.replace( /([a-z])([A-Z])/g, '$1-$2' ).toLowerCase();
+
 
 
     // YOUR CODE ABOVE HERE //
