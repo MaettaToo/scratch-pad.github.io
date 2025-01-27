@@ -14,7 +14,12 @@
  */
 function length(string) {
     // YOUR CODE BELOW HERE //
-
+//I: function with one parameter representing a string
+//O: numerical value of the length of the string
+//C:
+//E:
+//return the length of string using length method
+return string.length; 
    
     
     // YOUR CODE ABOVE HERE //
@@ -27,6 +32,14 @@ function length(string) {
  */
 function toLowerCase(string) {
     // YOUR CODE BELOW HERE //
+    //I: function with one param representing a string
+    //O:  the input string should return as a lowercase string
+    //C:
+    //E:
+    // create empty variable to assign to results of returning string to lower case
+    var lCase = ''; 
+    //return input string as lower case using toLowerCase property
+    return lCase = string.toLowerCase();
    
 
     // YOUR CODE ABOVE HERE //
