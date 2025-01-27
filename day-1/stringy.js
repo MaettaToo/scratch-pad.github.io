@@ -80,7 +80,7 @@ function toDashCase(string) {
 
 //return new string using replace and toLowercase
 
-
+return string.replace( /([a-z])([A-Z])/g, '$1-$2' ).toLowerCase();
 
     // YOUR CODE ABOVE HERE //
 }
