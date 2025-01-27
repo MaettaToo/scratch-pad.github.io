@@ -19,21 +19,28 @@
  *  d. how do you concatenate Strings? What operator do we use?
  */
 
-function reverseString(input) {
+function reverseString(strangeString) {
     // YOUR CODE GOES BELOW HERE //
     
     //I: function with strings as input
     //O: function will return the input string in the reverse
     //C:
-    //
-    //Initialize function reverseString  with one value in parameter representing string
-    //Initialize var assigned to empty strings to collect reversed string 
+    //E;
+//Initialize var assigned to empty strings to collect reversed string 
+var str = '';
     //Create for loop to access string iterating over length of string, start: end value of string, stop: beginning value of string, decrementing by 1
-    //access string using bracket notation use the 
-    
+    for (var i = strangeString.length -1; i >= 0; i-- ){
+    //assign the empty variable new value of variable plus the results of the loop
+    str = str + strangeString[i];
+    }
+    //return the variable
+    return str; 
+    // call the function using console log to check results
+  }
+  console.log(reverseString(hello));
     
     // YOUR CODE GOES ABOVE HERE //
-}
+
 
 
 
