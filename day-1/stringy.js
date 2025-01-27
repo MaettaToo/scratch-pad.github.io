@@ -50,11 +50,14 @@ function toLowerCase(string) {
  */
 function toUpperCase(string) {
     // YOUR CODE BELOW HERE //
-
-
-
-    // YOUR CODE ABOVE HERE //
-}
+  //I: function with one param representing a string
+    //O:  the input string should return as an  uppercase string
+    //C:
+    //E:
+    // create empty variable to assign to results of returning string to uppercase
+    var uCase = ''; 
+    //return input string as upper case using toUpperCase property
+    return uCase = string.toUpperCase();
 
 /**
  * Given an input String, return a new String forced to dash-case.
@@ -71,7 +74,13 @@ function toUpperCase(string) {
  */
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
+//I: function with one param represented as a string
+//O: return new string with dashes in the lower case
+//C:
+//E: 
 
+//return new string using replace and toLowercase
+return  string.replace( /([a-z])([A-Z])/g, '$1-$2' ).toLowerCase();
 
 
     // YOUR CODE ABOVE HERE //
