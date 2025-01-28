@@ -99,11 +99,24 @@ return string.replace( /([a-z])([A-Z])/g, '$1-$2' ).toLowerCase();
  */
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
-
+//I: Function with two parameters reprsenting a single character and a string
+//O: Boolean of true if the input string begins with the single char or false if the opposite
+//C: function is case insensitive
+//E: 
+//create conditional statement using stricly equal,toUpperCase and toLowerCase accessing the string using bracket notation
+if(string[0] === char.toLowerCase() && string[0] === char.toUpperCase()){
+    //return true if char equals first letter of string
+    return true}
+    else{
+        //return false for all other results
+        return false
+    }
+} 
+ 
     
 
     // YOUR CODE ABOVE HERE //
-}
+
 
 /**
  * Given an input String and a single character, return true if the String
@@ -119,7 +132,18 @@ function beginsWith(string, char) {
  */
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
-
+//I: Function with two parameters reprsenting a single character and a string
+//O: Boolean of true if the input string ends with the single char or false if the opposite
+//C: function is case insensitive
+//E: 
+//create conditional statement using strictly equal, toUpperCase and toLowerCase accessing the string using length property
+if(string.length-1 === char.toLowerCase() && string.length-1 === char.toUpperCase()){
+    //return true if char equals last letter of string
+    return true}
+    else{
+        //return false for all other results
+        return false
+    }
 
 
     // YOUR CODE ABOVE HERE //
@@ -132,7 +156,12 @@ function endsWith(string, char) {
  */
 function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+//I: function with two parameters represented as strings
+//O: return the input strings as one string
+//C:
+//E:
+// return stringOne  and stringTwo 
+ return stringOne + stringTwo;
 
 
     // YOUR CODE ABOVE HERE //
