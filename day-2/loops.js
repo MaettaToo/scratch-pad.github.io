@@ -12,7 +12,16 @@
  */
 function printArrayValues(array) {
   // YOUR CODE BELOW HERE //
-  
+  //I: function with one parameter represented as an array
+  //O: values of the array printed to the console
+  //C: use loop
+  //E: 
+  //create for loop to access array, duration begin at 0index end length of array increment by 1 console block return console.log
+  for (var i = 0; i<= array.length; i++ ){
+     console.log(array[i]);
+  }
+  return array;
+
   
   
   
@@ -25,7 +34,17 @@ function printArrayValues(array) {
  */
 function printArrayValuesInReverse(array) {
   // YOUR CODE BELOW HERE //
-  
+  //I: function with one parameter represented as an array  
+  //O: values of the array printed to the console in reverse
+  //C: use loop
+  //E: 
+  //create for loop to access array, duration begin at last value of array end at the 0 index increment by 1 console block  console.log array[i]
+for(var i = array.length - 1; i >= 0; i--){
+  console.log(array[i]);
+}
+    
+ //return array
+ return array;
   
   
   
@@ -37,7 +56,16 @@ function printArrayValuesInReverse(array) {
  */
 function getObjectKeys(object) {
   // YOUR CODE BELOW HERE //
-  
+  //I: object with keys
+  //O:an array made up of the object keys
+  //C: 
+  //E:
+  //init var as empty array to contain output
+  var anArray =[];
+  //create for in loop, console block objectKeys to obtain keys, return  keys pushed to the array
+  for (var getKeys in object){
+    
+  }
 
   // YOUR CODE ABOVE HERE //
 }

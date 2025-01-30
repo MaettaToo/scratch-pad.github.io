@@ -20,7 +20,13 @@
 
 function print(value) {
   // YOUR CODE BELOW HERE //
-  
+ //I: inputs function with one parameter
+ //O: value printed to console
+ //C:
+ //E:
+ 
+ // return console log value
+ return console.log(value); 
 
   
   // YOUR CODE ABOVE HERE //

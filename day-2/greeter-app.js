@@ -35,8 +35,25 @@
 
 function greeter(hour) {
     // YOUR CODE BELOW HERE //
-    
-    
+  //I: function with one parameter representing a number 
+  //O: function prints to console one string with corresponding greeting 
+  //C: Using if, else-if and else
+  //E:  
+ //   create conditional statement returning greeting for specified hour
+ 
+  if(hour >= 0 && hour <= 11){
+    return console.log( 'Good Morning!');
+ } 
+ else if (hour === 12 && hour === 16){ 
+    return console.log( 'Good Afternoon! ');
+ } 
+ else if (hour >= 17 && hour <= 21){
+   return console.log( 'Good Evening! ');
+ } 
+ else {
+    return console.log( 'Good Night! ');
+ }
+ 
     
     
     // YOUR CODE ABOVE HERE //
