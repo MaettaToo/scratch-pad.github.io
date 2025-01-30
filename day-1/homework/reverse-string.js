@@ -37,7 +37,7 @@ var str = '';
     return str; 
     // call the function using console log to check results
   }
-  console.log(reverseString(hello));
+  //console.log(reverseString(hello));
     
     // YOUR CODE GOES ABOVE HERE //
 

@@ -2,6 +2,8 @@
 
 'use strict';
 
+//const { split } = require("lodash");
+
 /**
  * IN CLASS EXERCISE: stringy.js
  */
@@ -57,6 +59,7 @@ function toUpperCase(string) {
     var uCase = ''; 
     //return input string as upper case using toUpperCase property
     return uCase = string.toUpperCase(string);
+}
 
 /**
  * Given an input String, return a new String forced to dash-case.
@@ -78,9 +81,12 @@ function toDashCase(string) {
 //C:
 //E: 
 
-//return new string using replace and toLowercase
-
-return string.replace( /([a-z])([A-Z])/g, '$1-$2' ).toLowerCase();
+//init var to hold results use split to separate string separate string using space btween the quotes
+var newArray = string.split(' ');
+//use join to concatenate string using dash as the separator
+var newString = newArray.join('-');
+// return newString string in the lowerccase
+return newString.toLowerCase();
 
     // YOUR CODE ABOVE HERE //
 }
@@ -103,15 +109,24 @@ function beginsWith(string, char) {
 //O: Boolean of true if the input string begins with the single char or false if the opposite
 //C: function is case insensitive
 //E: 
-//create conditional statement using stricly equal,toUpperCase and toLowerCase accessing the string using bracket notation
-if(string[0] === char.toLowerCase() && string[0] === char.toUpperCase()){
-    //return true if char equals first letter of string
-    return true}
-    else{
-        //return false for all other results
+//create new variable assigned to empty array to contain split string
+var splitString = [];
+// use split to convert string to array to access string
+splitString = string.split('');
+//create conditional statement using stricly equal,toUpperCase and toLowerCase, bracket notation to access splitString array    
+if (splitString[0] === 
+    char.toUpperCase()) {
+        return true;
+    } if (splitString[0] === 
+    char.toLowerCase()) {
+        return true;
+    } else{
         return false
     }
 } 
+// use console.log to call function and check results
+console.log(beginsWith('Max', 'm')); // => true;
+console.log(beginsWith('Max', 'z')); // => false;)
  
     
 
@@ -135,19 +150,31 @@ function endsWith(string, char) {
 //I: Function with two parameters reprsenting a single character and a string
 //O: Boolean of true if the input string ends with the single char or false if the opposite
 //C: function is case insensitive
-//E: 
-//create conditional statement using strictly equal, toUpperCase and toLowerCase accessing the string using length property
-if(string.length-1 === char.toLowerCase() && string.length-1 === char.toUpperCase()){
-    //return true if char equals last letter of string
-    return true}
+//E:
+//create new variable assigned to empty array to contain split string
+var splitString = []; 
+// use split to convert string to array to access string
+splitString = string.split('');
+//create conditional statement using stricly equal,toUpperCase and toLowerCase length property and bracket notation to access splitString array    
+if (splitString[splitString.length -1] === 
+    char.toUpperCase()) {
+        return true;
+    } 
+    if (splitString[splitString.length - 1]  === 
+    char.toLowerCase()) {
+        return true;
+    } 
     else{
-        //return false for all other results
         return false
     }
+} 
+// use console.log to call function and check results
+console.log(endsWith('Max', 'm')); // => false;
+console.log(endsWith('Max', 'z')); // => false;)
 
 
     // YOUR CODE ABOVE HERE //
-}
+
 
 /**
  * Given two input Strings, return the Strings concatenated into one.
@@ -160,10 +187,8 @@ function concat(stringOne, stringTwo) {
 //O: return the input strings as one string
 //C:
 //E:
-// return stringOne  and stringTwo 
+// return stringOne plus stringTwo 
  return stringOne + stringTwo;
-
-
     // YOUR CODE ABOVE HERE //
 }
 
@@ -179,11 +204,20 @@ function concat(stringOne, stringTwo) {
  */
 function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
+    // I: function with two parameters 
+    //O: string with all arguments from function joined together
+    //C:
+    //E:
     var args = Array.from(arguments);
+    // console.log args to see what the results look like
+//console.log(args)
+//use join method to join elements of array together
+return args.join('');
 
 
     // YOUR CODE ABOVE HERE //
 }
+console.log(join('red', true));
 
 /**
  * Given two Strings, return the longest of the two.
@@ -196,11 +230,23 @@ function join(stringOne, stringTwo) {
  */
 function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
+    //I: function with two parameters representing strings
+    //O: function should return string with longest length
+    //C:
+    //E:
+    //init if statement to compare lengths of stringOne vs stringTwo
+    if( stringOne.length > stringTwo.length){
+        return stringOne;
+    }
+    else{
+        return stringTwo;
+    }
+}
 
-
+console.log(longest('ben','maggie'));
 
     // YOUR CODE ABOVE HERE //
-}
+
 
 /**
  * Given two Strings, return 1 if the first string is higher in alphabetical order (meaning earlier in the alphabet) than
@@ -211,7 +257,20 @@ function longest(stringOne, stringTwo) {
  */
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+//I: function with two string paremeters
+//O: number 1,0, or -1  depending on the placement of the string in the alphabet
+//C:
+//E:
+// create if statement comparing alphabetical hierarchy 
+  if (stringOne < stringTwo) {
+    return 1;
+  }
+  if (stringOne > stringTwo) {
+    return -1;
+  }
+  else {
+    return 0;
+}
     // YOUR CODE ABOVE HERE //
 }
 
@@ -226,7 +285,20 @@ function sortAscending(stringOne, stringTwo) {
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
 
-
+//I: function with two string paremeters
+//O: number 1,0, or -1  depending on the placement of the string in the alphabet
+//C:
+//E:
+// create if statement comparing alphabetical hierarchy 
+if (stringOne > stringTwo) {
+    return 1;
+  }
+  if (stringOne < stringTwo) {
+    return -1;
+  }
+  else {
+    return 0;
+}
 
 
     // YOUR CODE ABOVE HERE //
