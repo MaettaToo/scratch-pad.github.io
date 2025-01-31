@@ -28,20 +28,22 @@ function range(start, end) {
     //C:
     //E:
     //init var as empty array to collect returned output
-    // init for loop with first condition = start, end with end incrementing by 1++
-    //create if statement if end > than start push end to start to the array if Start is > end then push start to end to the array
     var anArray = [];
-    
-         if (start < end ){
-            console.log('Monkey balls');//test to see if if statement works
+    // init for loop with first condition = start, end with end incrementing by 1++
+    for(var i = start; i <= end; i++){
+    //create if statement if end > than start push end to start to the array if Start is > end then push start to end to the array
+     if (start < end ){
+            anArray = anArray.push(i);
+
+            console.log(anArray);
          }
             else if (start > end){
                 console.log('helloLurid');//test to see if if statement works
             }       
     
-        }
+        }      
         
-    }
+    
     
     
     // YOUR CODE GOES ABOVE HERE //
