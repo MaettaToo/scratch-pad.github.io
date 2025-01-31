@@ -21,7 +21,10 @@ function createGreaterThanFilter(base) {
     // return a function with one param string or number  
     return function GivenValue(value){
         if( value >  base){
-            return 'is greater';
+            return true;
+        }
+        else{
+            return false
         }
 
     }
