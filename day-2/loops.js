@@ -60,11 +60,10 @@ function getObjectKeys(object) {
   //O:an array made up of the object keys
   //C: 
   //E:
-  //init var as empty array to contain output
-  var anArray =[];
-  //create for in loop, console block objectKeys to obtain keys, return  keys pushed to the array
+  //create for in loop, console block objectKeys to obtain keys, 
   for (var getKeys in object){
-    
+    //return  Object.keys
+    return Object.keys(object);
   }
 
   // YOUR CODE ABOVE HERE //
@@ -76,19 +75,35 @@ function getObjectKeys(object) {
  */
 function printObjectKeys(object) {
   // YOUR CODE BELOW HERE //
+  //I: object with keys 
+  //O: keys of object printed to the console
+  //C:
+  //E: 
+  //create for in loop
+  for (var key in object){//
+    //console.log keys in object
+    console.log(key);
+  }
+ 
+   
+  }
   
+
+ 
   
-  
-  
-  // YOUR CODE ABOVE HERE //
-}
+  // YOUR CODE ABOVE HERE //}
 
 /** 
  * Given an input Object, return an Array containing the Object's values.
  */
 function getObjectValues(object) {
   // YOUR CODE BELOW HERE //
-  
+  //I:  function with an object as a param
+  //O: an array with the object key
+  //C: 
+  //E: 
+  // return array of object values using Object.values
+  return Object.values(object);
   
   
   
@@ -101,8 +116,15 @@ function getObjectValues(object) {
  */
 function printObjectValues(object) {
   // YOUR CODE BELOW HERE //
-  
-  
+  //I: function object 
+  //O: the values of the object printed to the console
+  //C:
+  //E:
+  //create for in loop 
+  for(let key in object){
+    //console.log values of object using bracket notation to access
+    console.log(object[key]);
+  }
   
   
   // YOUR CODE ABOVE HERE //
@@ -113,8 +135,12 @@ function printObjectValues(object) {
  */
 function getObjectLength(object) {
   // YOUR CODE BELOW HERE //
-  
-  
+  //I: function with one param input is an object
+  //O: return the number of key values stored within input object
+  //C:
+  //E:
+  //return the length of the object using Object.keys and the length property 
+  return Object.keys(object).length;
   
   
   // YOUR CODE ABOVE HERE //
@@ -126,12 +152,24 @@ function getObjectLength(object) {
  */
 function printObjectValuesInReverse(object) {
   // YOUR CODE BELOW HERE //
+  //I: input function  with object as its parameter
+  //O: object values printed to the console in reverse
+  //C:
+  //E:
+  //create for loop to loop over object in reverse
+  for(var key in object){
+       console.log(Object.values());
+   }
+
+}
+  // nest for in loop within loop to access object
+  //  return console.log Object.values 
   
   
   
   
   // YOUR CODE ABOVE HERE //
-}
+
 
 
 
