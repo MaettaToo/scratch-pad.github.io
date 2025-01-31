@@ -33,10 +33,10 @@ function range(start, end) {
     var anArray = [];
     
          if (start < end ){
-            console.log('Monkey balls');
+            console.log('Monkey balls');//test to see if if statement works
          }
             else if (start > end){
-                console.log('helloLurid');
+                console.log('helloLurid');//test to see if if statement works
             }       
     
         }

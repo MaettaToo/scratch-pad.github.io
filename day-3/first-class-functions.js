@@ -74,7 +74,15 @@ function createLessThanFilter(base) {
  */
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
-    //I: 
+    //I: character of value startsWith 
+    //O: return function tht tests if the value of internal function begin with the startswith character
+    //C:
+    //E: 
+    //return function with one parameter represented as string
+    return function testString(string){
+        // create conditional statement to see if string begins with a character of startsWith
+        If(charAt )  
+    }
     
     
     

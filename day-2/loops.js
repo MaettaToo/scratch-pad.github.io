@@ -156,14 +156,16 @@ function printObjectValuesInReverse(object) {
   //O: object values printed to the console in reverse
   //C:
   //E:
-  //create for loop to loop over object in reverse
-  for(var key in object){
-       console.log(Object.values());
-   }
+  //init var as array assigned to object.values(object) to create an array   
+  var anArray = Object.values(object);
+  //create for loop to iterate over array and print values in reverse
+for( var i = anArray.length - 1; i >= 0; i--){
+  console.log( anArray[i]);
 
 }
-  // nest for in loop within loop to access object
-  //  return console.log Object.values 
+
+  }
+ 
   
   
   
