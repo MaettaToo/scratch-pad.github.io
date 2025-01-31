@@ -20,6 +20,7 @@ function createGreaterThanFilter(base) {
     //E:
     // return a function with one param string or number  
     return function GivenValue(value){
+        //create conditional statement comparing base to value
         if( value >  base){
             return true;
         }
@@ -42,7 +43,22 @@ function createGreaterThanFilter(base) {
 function createLessThanFilter(base) {
     // YOUR CODE BELOW HERE //
     // return a function that tests whether base 
-    
+     //I: function with one param input can be string or number
+    //O:return function that tests the input value from the 
+    //parent function against a the given value of the returned function to see which one is less than
+    //C:
+    //E:
+    // return a function with one param string or number  
+    return function GivenValue(value){
+        //create conditional statement comparing base to value
+        if( value <  base){
+            return true;
+        }
+        else{
+            return false
+        }
+
+    }
   
     
     
