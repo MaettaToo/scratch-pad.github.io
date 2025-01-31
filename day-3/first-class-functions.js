@@ -13,7 +13,17 @@
  */
 function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    
+    //I: function with one param input can be string or number
+    //O: return a function that tests whether a given value is greater than the base
+    //C:
+    //E:
+    // return a function with one param string or number  
+    return function(givenValue){
+        if( givenValue >  base){
+            return 'is greater';
+        }
+
+    }
    
     
     // YOUR CODE ABOVE HERE //
@@ -27,6 +37,7 @@ function createGreaterThanFilter(base) {
  */
 function createLessThanFilter(base) {
     // YOUR CODE BELOW HERE //
+    // return a function that tests whether base 
     
   
     

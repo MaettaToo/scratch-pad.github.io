@@ -23,8 +23,25 @@
  */
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
+    // I: function with two parameters represented as integers
+    //O: array of integers in ascending order or descending order dependent upon  value of two integers
+    //C:
+    //E:
+    //init var as empty array to collect returned output
+    // init for loop with first condition = start, end with end incrementing by 1++
+    //create if statement if end > than start push end to start to the array if Start is > end then push start to end to the array
+    var anArray = [];
     
+         if (start < end ){
+            console.log('Monkey balls');
+         }
+            else if (start > end){
+                console.log('helloLurid');
+            }       
     
+        }
+        
+    }
     
     
     // YOUR CODE GOES ABOVE HERE //
