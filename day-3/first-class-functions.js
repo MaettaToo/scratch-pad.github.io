@@ -79,15 +79,14 @@ function createStartsWithFilter(startsWith) {
     //C:
     //E: 
     //return function with one parameter represented as string
-   return function testString(string){
-
-        // create conditional statement to see if string begins with a character of startsWith
-       if(string.charAt(0).toLowerCase() === startsWith.charAt() && string.charAt(0).toUpperCase === startsWith.charAt()){
-        return true;
-       }
-       else{
-        return false;
-       }
+  return function testString(string){
+// create conditional statement to see if string begins with a character of startsWith
+if(string.charAt(0).toLowerCase() === startsWith || string.charAt(0).toUpperCase === startsWith){
+    return true;
+      }
+else {
+   return false;
+}
         
     
 
