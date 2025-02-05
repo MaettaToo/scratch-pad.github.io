@@ -80,14 +80,30 @@ function makeContactList() {
         // we implemented the length api for you //
        length: function(){
             return contacts.length;
-       },
-       addContact : function(contact){
+       },//add key addContact value is function that adds contact object  to the contact array 
+       addContact :  function(contact){
         //add for loop to iterate over length of the property, to access key value pairs and add to the list 
      for(var i = 0; i < contacts.length; i++);{
-        return contact.addContact = contacts[i];
+        //return contact added to contacts using push
+        return contacts.push(contact);
      }
-        
- } 
+       },
+       //add key findContact as function with one param rep as strings 
+       findContact : function(fullName){
+         //add for loop to iterate over length of the property, to access key value pairs and add to the list 
+     for(var i = 0; i < contacts.length; i++);{
+        // create conditional statement if fullName match name in contacts array then return contact object 
+        if ( fullName){
+            // to see if if statement is working and values that would return
+            console.log( contacts.push(addContact)); 
+        }
+       // else if (fullName !== contacts[i]){
+            //return 'undefined';
+        //}
+
+    }
+}
+     
 
     
         // we implemented the length api for you //
