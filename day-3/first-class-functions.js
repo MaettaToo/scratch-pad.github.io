@@ -80,12 +80,12 @@ function createStartsWithFilter(startsWith) {
     //E: 
     //return function with one parameter represented as string
   return function testString(string){
-// create conditional statement to see if string begins with a character of startsWith
-if(string.charAt(0).toLowerCase() === startsWith || string.charAt(0).toUpperCase === startsWith){
-    return true;
+// create conditional statement use charAt().toLowerCase or charAt().toUpperCase to compare cases
+if(string.charAt(0).toLowerCase() === startsWith || string.charAt(0).toUpperCase() === startsWith){
+    return true; //return true
       }
 else {
-   return false;
+   return false; // return false
 }
         
     
@@ -105,8 +105,27 @@ else {
  * This function needs to be case insensitive.
  */
 function createEndsWithFilter(endsWith) {
-    // YOUR CODE BELOW HERE //
-    
+// YOUR CODE BELOW HERE //
+    //I: function with one parameter representing a single character
+    //O: return function tht tests if the last character of a string === the endsWith character
+    //C: function needs to be case insensitive
+    //E: 
+    //return function with one parameter represented as string
+    return function testString(string){
+        // create conditional statement use charAt().toLowerCase or charAt().toUpperCase to compare cases
+        if(string.charAt(string.length - 1).toLowerCase() === endsWith|| string.charAt(string.length - 1).toUpperCase() === endsWith){
+            return true; //return true
+              }
+        else {
+           return false; // return false
+        }
+                
+            
+        
+        }   
+            
+            
+              
     
     
     
@@ -122,9 +141,23 @@ function createEndsWithFilter(endsWith) {
  */
 function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
+  //I: function with two param values of an array of strings and a function
+  //O: return the array of strings modified
+  //C:
+  //E:   
+  //init variable as empty array purpose to collect empty strings
+  var resultsArray = [];
+   //init for loop to iterate over strings purpose to access strings and return modified array
+    for( var i = 0; i < strings.length; i++){
+  //call modify function       
+ modify(strings[i]);
+ // push modified string to empty array
+resultsArray.push(modify(strings[i]));
+    }        
+
+//return modify results using push and empty array
+console.log(resultsArray);
+return resultsArray;     
     
     // YOUR CODE ABOVE HERE //
 }
@@ -143,10 +176,38 @@ function modifyStrings(strings, modify) {
  */
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
-    
+    //I: function with two parameters represented as function designed to pass the test and array of strings
+    //O: return a Boolean value based on whether argument passed the test/ return true if all strings pass the test
+    //C:
+    //E:
+    // init var to hold results 
+    var resultsArray = [];
+    //init for loop to iterate over callback function and access values in array
+    // for loop conditions began iteration at index 0, end iteration at < length of array, increment by one
+    for( var i = 0; i < strings.length; i++){
+        // call the test function to see if strings pass using bracket syntax strings index i
+        test(strings[i]);
+        //console.log(test(strings[i]));
+    // create conditional statement if test(strings[i] === false return false); else return false
+    if ( test(strings[i]) === false ){
+        return false;
+    } 
+    //conditional stmt if test strings === true push test(strings[i]) into empty array
+    if (test(strings[i]) === true){
+        resultsArray.push(test(strings[i]));
+    } 
+       
+}
+  //init for loop to iterate over callback function and access values in array
+    // for loop conditions began iteration at index 0, end iteration at < length of array, increment by one
+for (var i = 0; i < resultsArray.length; i++){
+    ////conditional stmt if resultsArray === true return true
+    if (resultsArray[i] === true){
+       //return true
+        return true;
+    }
+}
+   
     // YOUR CODE ABOVE HERE //
 }
 
