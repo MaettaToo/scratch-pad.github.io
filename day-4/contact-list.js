@@ -82,6 +82,7 @@ function makeContactList() {
             return contacts.length;
        },
        addContact : function(contact){
+        //add for loop to iterate over length of the property, to access key value pairs and add to the list 
      for(var i = 0; i < contacts.length; i++);{
         return contact.addContact = contacts[i];
      }
