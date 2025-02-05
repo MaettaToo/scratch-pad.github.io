@@ -34,10 +34,40 @@
  */
 
 // YOUR CODE GOES BELOW HERE //
+//I: function with 3 param represented as strings
+//O: return object
+//C: 
+//E:
+
 function makeContact(id, nameFirst, nameLast) {
+    // return object 
+    return { 
+        id : id,
+        nameFirst : nameFirst,
+        nameLast : nameLast
+    }
+    
+    
+
     
 } 
+//I: factor function
+//O: return object with following properties 
+/**length(): returns the number of contacts within the list
+function with parameters as object  addContact(contact): takes a contact object to be added to the 
+ *         contact-list.
+*function that returns an object: findContact(fullName): takes a full-name String, like 'Max Gaudin', and 
+ *         returns the contact object if found in the contacts-list, or, 
+ *         undefined if the fullName does not match any contacts in the list.
+ * function that returns : takes a contact object to be removed from removeContact(contact)
+ *         the contact-list.
+*add a printAllContactNames() Function to your makeContactList() factory. The printAllContactNames() Function should 
+ *         return a String formated with all the full-names of the separated 
+ *         with a line-break, like so:
+ **/
 
+//C:
+//E: 
 
 
 function makeContactList() {
@@ -47,6 +77,13 @@ function makeContactList() {
     var contacts = [];
     
     return {
+        contact : function addContact(contact){
+           for( var key in contact){
+            contacts[addContact.length()] = contact;
+            } 
+            return contacts;
+
+        }
         // we implemented the length api for you //
        
     }
