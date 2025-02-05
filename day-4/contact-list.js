@@ -96,9 +96,9 @@ function makeContactList() {
         // create conditional statement if fullName match name in contacts array then return contact object 
             //console.log(contacts[i]['nameFirst']);
                  
-       if ( checkName[0] === contacts[i]['nameFirst'] && checkName[checkName.length - 1 ] === contacts[i]['nameLast'] ){
+       if (checkName[0] === contacts[i]['nameFirst'] && checkName[checkName.length - 1 ] === contacts[i]['nameLast'] ){
             // to see if if statement is working and values that would return
-            console.log(contacts[i]);
+            return (contacts[i]);
         //}
        // else if (fullName !== contacts[i]){
             //return 'undefined';
