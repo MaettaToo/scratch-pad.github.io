@@ -80,32 +80,33 @@ function makeContactList() {
         // we implemented the length api for you //
        length: function(){
             return contacts.length;
-       },//add key addContact value is function that adds contact object  to the contact array 
+       },
+       //add key addContact value is function that adds contact object  to the contact array 
        addContact :  function(contact){
         //add for loop to iterate over length of the property, to access key value pairs and add to the list 
-     for(var i = 0; i < contacts.length; i++);{
-        //return contact added to contacts using push
-        return contacts.push(contact);
-     }
-       },
-       //add key findContact as function with one param rep as strings 
+            for(var i = 0; i < contacts.length; i++);{
+            //return contact added to contacts using push
+            return contacts.push(contact);
+            }
+        },
+            //add key findContact as function with one param rep as strings 
        findContact : function(fullName){
          //add for loop to iterate over length of the property, to access key value pairs and add to the list 
-     var checkName = fullName.split(' ');
-         for(var i = 0; i < contacts.length; i++){
-        // create conditional statement if fullName match name in contacts array then return contact object 
-            //console.log(contacts[i]['nameFirst']);
-        //if (fullName === contacts[i]['nameFirst'] + ' ' + contacts[i]['nameLast']);{      
-       if (checkName[0] === contacts[i]['nameFirst'] && checkName[checkName.length - 1 ] === contacts[i]['nameLast'] ){
-            // to see if if statement is working and values that would return
-            return (contacts[i]);
-         }
-         else {
-            return undefined;
-         }
-}
-       }
-       
+            var checkName = fullName.split(' ');
+                for(var i = 0; i < contacts.length; i++){
+                 // create conditional statement if fullName match name in contacts array then return contact object 
+                 if (checkName[0] === contacts[i]['nameFirst'] && checkName[checkName.length - 1 ] === contacts[i]['nameLast'] ){
+                    // return contact object
+                    return (contacts[i]);
+                        }
+                 else {
+                    return undefined;
+                    }
+                }
+        },
+        
+
+
      
 
     
