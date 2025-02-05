@@ -54,7 +54,7 @@ function makeContact(id, nameFirst, nameLast) {
 //I: factor function
 //O: return object with following properties 
 /**length(): returns the number of contacts within the list
-function with parameters as object  addContact(contact): takes a contact object to be added to the 
+add key addContact(contact) as function: takes a contact object to be added to the 
  *         contact-list.
 *function that returns an object: findContact(fullName): takes a full-name String, like 'Max Gaudin', and 
  *         returns the contact object if found in the contacts-list, or, 
@@ -77,13 +77,18 @@ function makeContactList() {
     var contacts = [];
     
     return {
-        contact : function addContact(contact){
-           for( var key in contact){
-            contacts[addContact.length()] = contact;
-            } 
-            return contacts;
+        // we implemented the length api for you //
+       length: function(){
+            return contacts.length;
+       },
+       addContact : function(contact){
+     for(var i = 0; i < contacts.length; i++);{
+        return contact.addContact = contacts[i];
+     }
+        
+ } 
 
-        }
+    
         // we implemented the length api for you //
        
     }
