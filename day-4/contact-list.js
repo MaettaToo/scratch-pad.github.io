@@ -103,7 +103,7 @@ function makeContactList() {
        // else if (fullName !== contacts[i]){
             //return 'undefined';
         //}
-
+//if (fullName === contacts[i]['nameFirst'] + ' ' +contacts[i]['nameLast']);
     
        }
     }
