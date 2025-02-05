@@ -92,22 +92,20 @@ function makeContactList() {
        findContact : function(fullName){
          //add for loop to iterate over length of the property, to access key value pairs and add to the list 
      var checkName = fullName.split(' ');
-         for(var i = 0; i < contacts.length; i++);{
+         for(var i = 0; i < contacts.length; i++){
         // create conditional statement if fullName match name in contacts array then return contact object 
             //console.log(contacts[i]['nameFirst']);
-                 
+        //if (fullName === contacts[i]['nameFirst'] + ' ' + contacts[i]['nameLast']);{      
        if (checkName[0] === contacts[i]['nameFirst'] && checkName[checkName.length - 1 ] === contacts[i]['nameLast'] ){
             // to see if if statement is working and values that would return
             return (contacts[i]);
-        //}
-       // else if (fullName !== contacts[i]){
-            //return 'undefined';
-        //}
-//if (fullName === contacts[i]['nameFirst'] + ' ' +contacts[i]['nameLast']);
-    
-       }
-    }
+         }
+         else {
+            return undefined;
+         }
 }
+       }
+       
      
 
     
