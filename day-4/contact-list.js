@@ -2,6 +2,8 @@
 
 'use strict';
 
+const { functions } = require("lodash");
+
 /**
  * 4: Contact List // Contacts
  * 
@@ -51,21 +53,9 @@ function makeContact(id, nameFirst, nameLast) {
 
     
 } 
-//I: factor function
-//O: return object with following properties 
-/**length(): returns the number of contacts within the list
-add key addContact(contact) as function: takes a contact object to be added to the 
- *         contact-list.
-*function that returns an object: findContact(fullName): takes a full-name String, like 'Max Gaudin', and 
- *         returns the contact object if found in the contacts-list, or, 
- *         undefined if the fullName does not match any contacts in the list.
- * function that returns : takes a contact object to be removed from removeContact(contact)
- *         the contact-list.
-*add a printAllContactNames() Function to your makeContactList() factory. The printAllContactNames() Function should 
- *         return a String formated with all the full-names of the separated 
- *         with a line-break, like so:
- **/
-
+//I: factory function with five keys comprised of functions.
+// O:  First key returns length of array. Second key returns contact object to contacts array, third key returns contact object if string is 
+//found in contacts array undefined if not, fourth key return removed contact object, fifth key returns string of full names separted by break 
 //C:
 //E: 
 
@@ -95,7 +85,7 @@ function makeContactList() {
             var checkName = fullName.split(' ');
                 for(var i = 0; i < contacts.length; i++){
                  // create conditional statement if fullName match name in contacts array then return contact object 
-                 if (checkName[0] === contacts[i]['nameFirst'] && checkName[checkName.length - 1 ] === contacts[i]['nameLast'] ){
+                 if (checkName[0] === contacts[i]['nameFirst'] && checkName[checkName.length - 1 ] === contacts[i]['nameLast']){
                     // return contact object
                     return (contacts[i]);
                         }
@@ -104,7 +94,37 @@ function makeContactList() {
                     }
                 }
         },
-        
+        // add key value pair removeContact with function as value 
+        removeContact: function(contact){
+            // create for loop to iterate over contacts array to access elements of array
+            // condition start at index 0, end at less than length of contacts array, increment +1
+            for (var i = 0; i < contacts.length; i++){
+                //return removed contact object
+                return contacts.splice(contacts[i], 1)
+            }
+             
+
+        },
+        // add key value pair printAllContactNames  with function as value object as the param
+        printAllContactNames: function(contact){
+            //init var holderArray as empty array to collect key value pairs
+            var holderArray = [];
+            //init for loop to iterate over contacts array to access key value pairs of object in array
+            // condition start at index 0, end at less than length of contacts array, increment +1
+            for (var i = 0; i < contacts.length; i++){
+                // push nameFirst value and nmeLast value into holder array 
+                 holderArray.push(contacts[i]['nameFirst'] + ' ' + contacts[i]['nameLast']);
+                
+            
+            }
+               //return holder array to string using to join method and new line 
+                 return holderArray.join('\n');
+
+
+
+        }
+
+
 
 
      
@@ -113,6 +133,7 @@ function makeContactList() {
         // we implemented the length api for you //
        
     }
+
 }
 
 makeContactList(); // => { length: function(){}, addContact: function(){}, findContact: function(){}  }
